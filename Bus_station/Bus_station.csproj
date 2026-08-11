@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D5C5951-56A0-407F-B50E-FCA4340D1954}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Bus_station</RootNamespace>
+    <AssemblyName>Bus_station</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Administrator\Documents\Test_Bus\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6A446740BF51DAFE5BFE931D178FD86015005116</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Bus_station_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BookingBLL.cs" />
+    <Compile Include="BLL\BusBLL.cs" />
+    <Compile Include="BLL\CustomerBLL.cs" />
+    <Compile Include="BLL\DriverBLL.cs" />
+    <Compile Include="BLL\EmployeeBLL.cs" />
+    <Compile Include="BLL\PaymentBLL.cs" />
+    <Compile Include="BLL\RouteBLL.cs" />
+    <Compile Include="BLL\ScheduleBLL.cs" />
+    <Compile Include="BLL\TicketBLL.cs" />
+    <Compile Include="BLL\UserAccountBLL.cs" />
+    <Compile Include="BusStationDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BusStationDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BookingDAL.cs" />
+    <Compile Include="DAL\BusDAL.cs" />
+    <Compile Include="DAL\PaymentDAL.cs" />
+    <Compile Include="DAL\RouteDAL.cs" />
+    <Compile Include="DAL\ScheduleDAL.cs" />
+    <Compile Include="DAL\TicketDAL.cs" />
+    <Compile Include="Form\CustomerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CustomerFrm.Designer.cs">
+      <DependentUpon>CustomerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DriverFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DriverFrm.Designer.cs">
+      <DependentUpon>DriverFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\EmployeeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\EmployeeFrm.Designer.cs">
+      <DependentUpon>EmployeeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\BookingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\BookingFrm.Designer.cs">
+      <DependentUpon>BookingFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\BusFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Bus.Designer.cs">
+      <DependentUpon>BusFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CustomerDAL.cs" />
+    <Compile Include="DAL\DBConnection.cs" />
+    <Compile Include="DAL\DriverDAL.cs" />
+    <Compile Include="DAL\EmployeeDAL.cs" />
+    <Compile Include="DAL\UserAccountDAL.cs" />
+    <Compile Include="Form\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Booking.cs" />
+    <Compile Include="Entity\Bus.cs" />
+    <Compile Include="Entity\Customer.cs" />
+    <Compile Include="Entity\Driver.cs" />
+    <Compile Include="Entity\Employee.cs" />
+    <Compile Include="Entity\Payment.cs" />
+    <Compile Include="Entity\Route.cs" />
+    <Compile Include="Entity\Schedule.cs" />
+    <Compile Include="Entity\Ticket.cs" />
+    <Compile Include="Entity\UserAccount.cs" />
+    <Compile Include="Form\LoginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LoginFrm.Designer.cs">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PaymentFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\PaymentFrm.Designer.cs">
+      <DependentUpon>PaymentFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Form\RouteFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\RouteFrm.Designer.cs">
+      <DependentUpon>RouteFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ScheduleFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ScheduleFrm.Designer.cs">
+      <DependentUpon>ScheduleFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportFrm.Designer.cs">
+      <DependentUpon>ReportFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ThemColor.cs" />
+    <Compile Include="Form\TicketFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\TicketFrm.Designer.cs">
+      <DependentUpon>TicketFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\CustomerFrm.resx">
+      <DependentUpon>CustomerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DriverFrm.resx">
+      <DependentUpon>DriverFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\EmployeeFrm.resx">
+      <DependentUpon>EmployeeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\BookingFrm.resx">
+      <DependentUpon>BookingFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\BusFrm.resx">
+      <DependentUpon>BusFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LoginFrm.resx">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PaymentFrm.resx">
+      <DependentUpon>PaymentFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\RouteFrm.resx">
+      <DependentUpon>RouteFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ScheduleFrm.resx">
+      <DependentUpon>ScheduleFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\TicketFrm.resx">
+      <DependentUpon>TicketFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PassengerManifest.rdlc" />
+    <EmbeddedResource Include="Reports\ReportFrm.resx">
+      <DependentUpon>ReportFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RevenueReport.rdlc" />
+    <EmbeddedResource Include="Reports\TicketReceipt.rdlc" />
+    <None Include=".gitignore" />
+    <None Include="BusStationDBDataSet.xsc">
+      <DependentUpon>BusStationDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BusStationDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BusStationDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BusStationDBDataSet.xss">
+      <DependentUpon>BusStationDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bus_station_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

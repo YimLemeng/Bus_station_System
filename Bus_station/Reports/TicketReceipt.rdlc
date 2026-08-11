@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+	<Body>
+		<ReportItems>
+			<!-- Header Banner ស្អាតគ្មាន Emoji ជាន់អក្សរ -->
+			<Textbox Name="HeaderBanner">
+				<CanGrow>true</CanGrow>
+				<KeepTogether>true</KeepTogether>
+				<Paragraphs>
+					<Paragraph>
+						<TextRuns>
+							<TextRun>
+								<Value>CAMBODIA EXPRESS BUS TICKET</Value>
+								<Style>
+									<FontFamily>Segoe UI</FontFamily>
+									<FontSize>15pt</FontSize>
+									<FontWeight>Bold</FontWeight>
+									<Color>White</Color>
+								</Style>
+							</TextRun>
+						</TextRuns>
+						<Style>
+							<TextAlign>Center</TextAlign>
+						</Style>
+					</Paragraph>
+				</Paragraphs>
+				<Top>0.15in</Top>
+				<Left>0.3in</Left>
+				<Height>0.45in</Height>
+				<Width>5.9in</Width>
+				<Style>
+					<BackgroundColor>#0284C7</BackgroundColor>
+					<PaddingLeft>8pt</PaddingLeft>
+					<PaddingRight>8pt</PaddingRight>
+					<PaddingTop>8pt</PaddingTop>
+					<PaddingBottom>8pt</PaddingBottom>
+					<Border>
+						<Style>None</Style>
+					</Border>
+				</Style>
+			</Textbox>
+			<Tablix Name="TablixTicket">
+				<TablixBody>
+					<TablixColumns>
+						<TablixColumn>
+							<Width>2.95in</Width>
+						</TablixColumn>
+						<TablixColumn>
+							<Width>2.95in</Width>
+						</TablixColumn>
+					</TablixColumns>
+					<TablixRows>
+						<TablixRow>
+							<Height>2.0in</Height>
+							<TablixCells>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="DetailsLeft">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>TICKET NO:  </Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#64748B</Color>
+																<FontSize>9pt</FontSize>
+															</Style>
+														</TextRun>
+														<TextRun>
+															<Value>=Fields!TicketID.Value</Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#0284C7</Color>
+																<FontSize>11pt</FontSize>
+															</Style>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>PASSENGER NAME: </Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#64748B</Color>
+																<FontSize>9pt</FontSize>
+															</Style>
+														</TextRun>
+														<TextRun>
+															<Value>=Fields!CustomerName.Value</Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#0F172A</Color>
+																<FontSize>11pt</FontSize>
+															</Style>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>DEPARTURE: </Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#64748B</Color>
+																<FontSize>9pt</FontSize>
+															</Style>
+														</TextRun>
+														<TextRun>
+															<Value>=Fields!Departure.Value</Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#0284C7</Color>
+																<FontSize>11pt</FontSize>
+															</Style>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>DATE &amp; TIME: </Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#64748B</Color>
+																<FontSize>9pt</FontSize>
+															</Style>
+														</TextRun>
+														<TextRun>
+															<Value>=Fields!DepartureTime.Value</Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#334155</Color>
+																<FontSize>10pt</FontSize>
+																<Format>g</Format>
+															</Style>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<PaddingLeft>10pt</PaddingLeft>
+												<PaddingRight>10pt</PaddingRight>
+												<PaddingTop>10pt</PaddingTop>
+												<PaddingBottom>10pt</PaddingBottom>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="DetailsRight">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>BOOKING NO:  </Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#64748B</Color>
+																<FontSize>9pt</FontSize>
+															</Style>
+														</TextRun>
+														<TextRun>
+															<Value>=Fields!BookingID.Value</Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#0F172A</Color>
+																<FontSize>11pt</FontSize>
+															</Style>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>SEAT NUMBER:  </Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#64748B</Color>
+																<FontSize>9pt</FontSize>
+															</Style>
+														</TextRun>
+														<TextRun>
+															<Value>=Fields!SeatNumber.Value</Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#DC2626</Color>
+																<FontSize>14pt</FontSize>
+															</Style>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>DESTINATION: </Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#64748B</Color>
+																<FontSize>9pt</FontSize>
+															</Style>
+														</TextRun>
+														<TextRun>
+															<Value>=Fields!Destination.Value</Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#0284C7</Color>
+																<FontSize>11pt</FontSize>
+															</Style>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>PRICE PAID:  </Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#64748B</Color>
+																<FontSize>9pt</FontSize>
+															</Style>
+														</TextRun>
+														<TextRun>
+															<Value>=Fields!Price.Value</Value>
+															<Style>
+																<FontFamily>Segoe UI</FontFamily>
+																<FontWeight>Bold</FontWeight>
+																<Color>#059669</Color>
+																<FontSize>13pt</FontSize>
+																<Format>'$'#,##0.00</Format>
+															</Style>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<PaddingLeft>10pt</PaddingLeft>
+												<PaddingRight>10pt</PaddingRight>
+												<PaddingTop>10pt</PaddingTop>
+												<PaddingBottom>10pt</PaddingBottom>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+							</TablixCells>
+						</TablixRow>
+					</TablixRows>
+				</TablixBody>
+				<TablixColumnHierarchy>
+					<TablixMembers>
+						<TablixMember />
+						<TablixMember />
+					</TablixMembers>
+				</TablixColumnHierarchy>
+				<TablixRowHierarchy>
+					<TablixMembers>
+						<TablixMember>
+							<Group Name="TicketGroup" />
+						</TablixMember>
+					</TablixMembers>
+				</TablixRowHierarchy>
+				<DataSetName>TicketDataSet</DataSetName>
+				<Top>0.6in</Top>
+				<Left>0.3in</Left>
+				<Height>2.0in</Height>
+				<Width>5.9in</Width>
+				<Style>
+					<Border>
+						<Style>Solid</Style>
+						<Color>#BAE6FD</Color>
+					</Border>
+					<BackgroundColor>#F0F9FF</BackgroundColor>
+				</Style>
+			</Tablix>
+			<Textbox Name="FooterNote">
+				<CanGrow>true</CanGrow>
+				<KeepTogether>true</KeepTogether>
+				<Paragraphs>
+					<Paragraph>
+						<TextRuns>
+							<TextRun>
+								<Value>Thank you for traveling with us! Please arrive 15 minutes before departure time.</Value>
+								<Style>
+									<FontFamily>Segoe UI</FontFamily>
+									<FontSize>8pt</FontSize>
+									<FontStyle>Italic</FontStyle>
+									<Color>#64748B</Color>
+								</Style>
+							</TextRun>
+						</TextRuns>
+						<Style>
+							<TextAlign>Center</TextAlign>
+						</Style>
+					</Paragraph>
+				</Paragraphs>
+				<Top>2.65in</Top>
+				<Left>0.3in</Left>
+				<Height>0.3in</Height>
+				<Width>5.9in</Width>
+				<Style>
+					<Border>
+						<Style>None</Style>
+					</Border>
+				</Style>
+			</Textbox>
+		</ReportItems>
+		<Height>3.0in</Height>
+		<Style />
+	</Body>
+	<Width>6.5in</Width>
+	<Page>
+		<PageHeight>4.0in</PageHeight>
+		<PageWidth>6.5in</PageWidth>
+		<LeftMargin>0.2in</LeftMargin>
+		<RightMargin>0.2in</RightMargin>
+		<TopMargin>0.2in</TopMargin>
+		<BottomMargin>0.2in</BottomMargin>
+		<Style />
+	</Page>
+	<DataSources>
+		<DataSource Name="BusStationDBDataSet">
+			<ConnectionProperties>
+				<DataProvider>System.Data.DataSet</DataProvider>
+				<ConnectString>/* Local Context */</ConnectString>
+			</ConnectionProperties>
+			<rd:DataSourceID>00000000-0000-0000-0000-000000000000</rd:DataSourceID>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="TicketDataSet">
+			<Query>
+				<DataSourceName>BusStationDBDataSet</DataSourceName>
+				<CommandText>SELECT * FROM vw_TicketDetails</CommandText>
+			</Query>
+			<Fields>
+				<Field Name="TicketID">
+					<DataField>TicketID</DataField>
+					<rd:TypeName>System.Int32</rd:TypeName>
+				</Field>
+				<Field Name="BookingID">
+					<DataField>BookingID</DataField>
+					<rd:TypeName>System.Int32</rd:TypeName>
+				</Field>
+				<Field Name="IssueDate">
+					<DataField>IssueDate</DataField>
+					<rd:TypeName>System.DateTime</rd:TypeName>
+				</Field>
+				<Field Name="Price">
+					<DataField>Price</DataField>
+					<rd:TypeName>System.Decimal</rd:TypeName>
+				</Field>
+				<Field Name="CustomerName">
+					<DataField>CustomerName</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="Departure">
+					<DataField>Departure</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="Destination">
+					<DataField>Destination</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="DepartureTime">
+					<DataField>DepartureTime</DataField>
+					<rd:TypeName>System.DateTime</rd:TypeName>
+				</Field>
+				<Field Name="SeatNumber">
+					<DataField>SeatNumber</DataField>
+					<rd:TypeName>System.Int32</rd:TypeName>
+				</Field>
+			</Fields>
+		</DataSet>
+	</DataSets>
+</Report>

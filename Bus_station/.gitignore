@@ -1,0 +1,14 @@
+﻿# Cache & Output Folders
+.vs/
+bin/
+obj/
+*.user
+*.suo
+
+# Ignore App.config, Properties & SqlServerTypes
+App.config
+**/App.config
+Properties/
+**/Properties/
+SqlServerTypes/
+**/SqlServerTypes/
