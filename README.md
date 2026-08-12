@@ -28,10 +28,16 @@ A comprehensive, modern desktop application built using **C# Windows Forms**, **
 ## 🏗️ Architecture & Project Structure (រចនាសម្ព័ន្ធកូដ 3-Tier)
 
 This project strictly follows the **3-Tier Architecture (UI -> BLL -> DAL -> Database)** for clean separation of concerns and high maintainability:
+BusStationManagement/ ├── 📁 Forms/ # Presentation Layer (WinForms UI) │ ├── Dashboard.cs # Main KPI dashboard │ ├── BookingFrm.cs # Booking reservation UI │ ├── PaymentFrm.cs # Payment processing & receipt trigger │ ├── TicketFrm.cs # Ticket issuance UI │ ├── ReportFrm.cs # RDLC Report Viewer UI │ └── ... ├── 📁 BLL/ # Business Logic Layer │ ├── BookingBLL.cs # Validation & business rules for Bookings │ ├── PaymentBLL.cs # Payment method validation & auto-confirm logic │ ├── TicketBLL.cs # Ticket issuance business logic │ └── ... ├── 📁 DAL/ # Data Access Layer (ADO.NET + Stored Procedures) │ ├── DBConnection.cs # SQL Connection Manager │ ├── BookingDAL.cs # SQL execution for Bookings │ ├── PaymentDAL.cs # SQL execution for Payments & Views │ └── ... ├── 📁 Entity/ # Data Models & DTOs │ ├── Booking.cs │ ├── Payment.cs │ ├── Ticket.cs │ └── ... ├── 📁 Reports/ # RDLC Report Definitions │ ├── RevenueReport.rdlc # Financial Revenue XML definition │ ├── TicketReceipt.rdlc # Ticket Printable Receipt XML definition │ └── PassengerManifest.rdlc # Trip Manifest XML definition └── 📄 App.config # System & DB Connection String Configurations
 
-## ⚙️ Prerequisites & Setup
+
+---
+
+## ⚙️ Prerequisites & Setup 
+
 ### 1. Database Configuration
 Before running the application, make sure to attach or configure your local SQL Server instance. Update the database properties inside the `App.config` file to match your SQL Server environment credentials:
+
 ```xml
 <connectionStrings>
     <add name="MyDbConnection"
