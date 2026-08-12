@@ -28,3 +28,13 @@ A comprehensive, modern desktop application built using **C# Windows Forms**, **
 ## 🏗️ Architecture & Project Structure (រចនាសម្ព័ន្ធកូដ 3-Tier)
 
 This project strictly follows the **3-Tier Architecture (UI -> BLL -> DAL -> Database)** for clean separation of concerns and high maintainability:
+
+## ⚙️ Prerequisites & Setup
+### 1. Database Configuration
+Before running the application, make sure to attach or configure your local SQL Server instance. Update the database properties inside the `App.config` file to match your SQL Server environment credentials:
+```xml
+<connectionStrings>
+    <add name="MyDbConnection"
+         connectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=BusStationDB;Integrated Security=True;"
+         providerName="System.Data.SqlClient" />
+</connectionStrings>
