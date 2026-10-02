@@ -4,7 +4,6 @@
 ![Framework](https://img.shields.io/badge/Framework-.NET%204.7.2-purple?style=for-the-badge&logo=.net)
 ![Database](https://img.shields.io/badge/Database-SQL%20Server-red?style=for-the-badge&logo=microsoft-sql-server)
 ![Architecture](https://img.shields.io/badge/Architecture-3--Tier%20%28UI--BLL--DAL%29-brightgreen?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-orange?style=for-the-badge)
 
 A comprehensive, modern desktop application built using **C# Windows Forms**, **SQL Server**, and **RDLC Reporting Services** designed to manage bus station operations, online/offline ticket bookings, payment processing, schedule dispatching, driver & fleet allocations, and financial reporting.
 
